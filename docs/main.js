@@ -1,5 +1,7 @@
 $(document).ready(
     function(){
+        var audioFile = new Audio('./up.mp3');
+
         $(".num h1").on("click",(e)=>{
             var num = $(e.target).text();
             $(".passsword").text($(".passsword").text()+num)
@@ -29,6 +31,16 @@ $(document).ready(
                 $("#base3").addClass("base-show")
                 $("#base2").addClass("base-hide-up")
                 $("#base2").removeClass("base-show")
+                
+                audioFile.play();
+        })
+        $(".next").on("click",(e)=>{
+                console.log("gdgd")
+                $("#base4").show()
+                $("#base4").removeClass("base-hide")
+                $("#base4").addClass("base-show")
+                $("#base3").addClass("base-hide-up")
+                $("#base3").removeClass("base-show")
         })
         
     }
