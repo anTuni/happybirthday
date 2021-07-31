@@ -4,12 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    
     <title>생일축하해</title>
 </head>
+<style>
+    body{
+        color: #fff;
+        font-family: 'Gowun Dodum', sans-serif;
+    }
+    .full{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .base{
+        position: absolute;
+        top: 0vh;
+        transition: all 0.5s;
+    }
+    .base-hide-up{
+        top: -100vh;
+    }
+    .base-hide{
+        top: 100vh;
+    }
+    .base-show{
+        position: absolute;
+        display: flex;
+        top: 0;
+    }
+    .num{
+        display: flex;
+        text-align: center;
+        padding: 10px 0 10px 0;
+        
+    }
+    .num > div{
+        border: 1px solid #fff;
+    }
+    .num > div > h1{
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    .num > div > h2{
+        padding-top: 20%;
+        padding-bottom: 20%;
+        color: #fff;
+    }
+    .phone{
+        max-width: 400px;   
+    }
+    .pass{
+        max-width: 400px;   
+    }
+    .passsword{
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        min-height: 36px;
+    }
+    .underline{
+        width: 100%;
+        border-top: 2px solid #fff;
+    }
+    .text{
+        text-align: center;
+    }
+</style>
 <body>
-    <div>
-        안녕하세요.
+    <div id="base1" class="base col-12 d-flex full base justify-content-center align-items-center" style="background-color: cornflowerblue">
+        <div class="col-8">
+            <div class="text"><h5>🎉생일 축하해 하정아🎉</h5>
+                <p style="font-size: 12px;">
+                    비밀번호를 입력하고 
+                    <br>
+                    우물정# 자를 눌러주세요.
+                    <br>
+                    힌트 : 내 핸드폰 비밀번호
+                </p>
+            </div>
+        </div>
+        <div class="col-6 pass">
+            <div class="passsword"></div>
+            <div class="underline"></div>
+        </div>
+        <div class="phone col-6">
+            <div class="num">
+                <div class="col-4" style="border-top-left-radius: 20px;"><h1>1</h1></div>
+                <div class="col-4"><h1>2</h1></div>
+                <div class="col-4" style="border-top-right-radius: 20px;"><h1>3</h1></div>    
+            </div>
+            <div class="num">
+                <div class="col-4"><h1>4</h1></div>
+                <div class="col-4"><h1>5</h1></div>
+                <div class="col-4"><h1>6</h1></div>    
+            </div>
+            <div class="num">
+                <div class="col-4"><h1>7</h1></div>
+                <div class="col-4"><h1>8</h1></div>
+                <div class="col-4"><h1>9</h1></div>    
+            </div>
+            <div class="num">
+                <div class="col-4 input" style="border-bottom-left-radius: 20px;"><h2>#</h2></div>
+                <div class="col-4"><h1>0</h1></div>
+                <div class="col-4 back" style="border-bottom-right-radius: 20px;"><h2>←</h2></div>    
+            </div>
+        </div>
+    </div>
+    <div id="base2" class="base-hide base col-12 full base justify-content-center align-items-center" 
+    style="background-color:darkblue; display: none;">
+        <video></video>
     </div>
 </body>
 </html>
